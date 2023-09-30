@@ -1,0 +1,94 @@
+.check-icon,
+.btn img {
+  width: 24px;
+  height: 24px;
+}
+.btn {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+body {
+  font-family: Arial, sens-serif;
+}
+
+.container {
+  width: min(90%, 1640px);
+  margin-inline: auto;
+}
+
+.table-wrap {
+  border-radius: 10px;
+  border: 1px solid #666;
+  overflow: hidden;
+}
+.my-table {
+  border: none;
+  border-collapse: collapse;
+  font-size: 18px;
+  width: 100%;
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+  thead {
+    th {
+      background-color: #efefef;
+      padding: 20px 10px;
+    }
+  }
+  tbody {
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+    td {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .my-table {
+    display: flex;
+    border-radius: 10px 0 0 10px;
+    thead {
+      display: block;
+      min-width: 250px;
+      tr {
+        display: flex;
+        flex-direction: column;
+        th {
+          text-align: left;
+          padding: 10px;
+        }
+      }
+    }
+    tbody {
+      display: flex;
+      overflow-x: auto;
+      tr {
+        display: flex;
+        flex-direction: column;
+        min-width: 200px;
+      }
+    }
+    th, td {
+      height: 30px;
+      line-height: 30px;
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .my-table {
+    font-size: 16px;
+    thead {
+      min-width: 170px;
+    }
+    th:not(:last-child), td:not(:last-child) {
+      height: 20px;
+      line-height: 20px;
+    }
+  }
+}
